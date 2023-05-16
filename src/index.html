@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leaderboard</title>
+</head>
+<body>
+    <h1>leaderboard</h1>
+    <main class="d-flex justify-content-center">
+        <section class="d-flex leaderboard"> 
+            
+            <div class="d-flex flex-column width-50 display-leaderboard">
+                <div class="d-flex justify-content-space-between margin-bottom leaderboard-title">
+                    <h2>recents scores</h2>
+                    <button class="btn-refresh" >refresh</button>
+                </div>
+                <div class="leaderboard-body">
+                    <ul class="unstyled-list list-score">
+                        <li class="score-item">Name: 100</li>
+                        <li class="score-item">Name: 50</li>
+                        <li class="score-item">Name: 40</li>
+                        <li class="score-item">Name: 90</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="d-flex flex-column width-50 add-to-leaderboard">
+                <div class="margin-bottom leaderboard-title">
+                    <h2>add your scores</h2>
+                </div>
+                <div class="leaderboard-body">
+                    <form>
+                        <div class="name-container">
+                            <input type="text" class="input name" placeholder="Your Name">
+                        </div>
+                        <div class="score-container">
+                            <input type="text" class="input score" placeholder="Your Name">
+                        </div>
+                        <div class="d-flex justify-content-end submit-container">
+                            <button class="btn-submit"> submit </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+</body>
+</html>
