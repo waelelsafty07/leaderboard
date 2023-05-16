@@ -43,6 +43,10 @@ body {
   width: 50%;
 }
 
+.unstyled-list {
+  list-style: none;
+}
+
 main {
   .leaderboard {
     width: 90%;
@@ -66,6 +70,14 @@ main {
 
       .leaderboard-body {
         border: 1px solid #000;
+        .list-score {
+          .score-item {
+            padding: 1rem 0;
+            &:nth-child(even) {
+              background-color: #eee;
+            }
+          }
+        }
       }
     }
 
