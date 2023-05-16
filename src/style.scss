@@ -70,9 +70,11 @@ main {
 
       .leaderboard-body {
         border: 1px solid #000;
+
         .list-score {
           .score-item {
             padding: 1rem 0;
+
             &:nth-child(even) {
               background-color: #eee;
             }
