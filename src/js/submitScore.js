@@ -16,6 +16,8 @@ if (submitBtn) {
     };
     if (user && score) {
       await leaderboard.addNewScores(body);
+      nameInput.value = '';
+      scoreInput.value = '';
     }
   });
 }
