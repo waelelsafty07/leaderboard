@@ -60,6 +60,7 @@ main {
     .leaderboard-title > *::first-letter {
       text-transform: uppercase;
     }
+
     .spinner {
       width: 40px;
       height: 40px;
@@ -70,6 +71,7 @@ main {
       display: none;
       margin: auto;
     }
+
     .display-leaderboard {
       .leaderboard-title {
         .btn-refresh {
@@ -79,6 +81,7 @@ main {
 
       .leaderboard-body {
         border: 1px solid #000;
+
         .list-score {
           .score-item {
             padding: 1rem 0;
@@ -113,6 +116,7 @@ main {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
