@@ -60,7 +60,16 @@ main {
     .leaderboard-title > *::first-letter {
       text-transform: uppercase;
     }
-
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s infinite linear;
+      display: none;
+      margin: auto;
+    }
     .display-leaderboard {
       .leaderboard-title {
         .btn-refresh {
@@ -70,7 +79,6 @@ main {
 
       .leaderboard-body {
         border: 1px solid #000;
-
         .list-score {
           .score-item {
             padding: 1rem 0;
@@ -98,5 +106,14 @@ main {
         }
       }
     }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

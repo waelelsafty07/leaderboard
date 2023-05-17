@@ -26,7 +26,10 @@ const createScoreItem = (text) => {
 
 const getScores = async () => {
   if (listScore) {
+    const spinner = document.querySelector('.display-leaderboard .spinner');
+    spinner.style.display = 'block';
     const scores = await leaderboard.getScores();
+    if (scores) spinner.style.display = 'none';
     scores.result.forEach((score) => {
       const text = `${score.user}: ${score.score}`;
       listScore.appendChild(createScoreItem(text));
