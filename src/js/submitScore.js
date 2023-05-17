@@ -8,6 +8,7 @@ if (submitBtn) {
   const scoreInput = document.querySelector('.score');
   submitBtn.addEventListener('click', async (e) => {
     e.preventDefault();
+    const spinner = document.querySelector('.add-to-leaderboard .spinner');
     const user = nameInput.value;
     const score = scoreInput.value;
     const body = {
@@ -15,7 +16,9 @@ if (submitBtn) {
       score,
     };
     if (user && score) {
+      spinner.style.display = 'block';
       await leaderboard.addNewScores(body);
+      spinner.style.display = 'none';
       nameInput.value = '';
       scoreInput.value = '';
     }
