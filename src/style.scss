@@ -59,6 +59,8 @@ body {
 }
 
 main {
+  margin-top: 1rem;
+
   .leaderboard {
     width: 90%;
     gap: 3rem;
@@ -88,6 +90,10 @@ main {
 
             &:nth-child(even) {
               background-color: #eee;
+            }
+
+            .score-item-text {
+              margin: 1rem;
             }
           }
         }
@@ -144,4 +150,26 @@ main {
 
 .failed {
   background-color: #c95d5d;
+}
+
+@media screen and (min-width: 375px) {
+  main {
+    .leaderboard {
+      flex-direction: column-reverse;
+    }
+    .width-50 {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    .leaderboard {
+      flex-direction: row;
+    }
+    .width-50 {
+      width: 50%;
+    }
+  }
 }
