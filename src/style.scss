@@ -109,6 +109,21 @@ main {
         }
       }
     }
+    .alert-container {
+      opacity: 0;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease-in;
+    }
+
+    .alert-visible {
+      opacity: 1;
+    }
   }
 }
 
@@ -120,4 +135,12 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.success {
+  background-color: green;
+}
+
+.failed {
+  background-color: #c95d5d;
 }

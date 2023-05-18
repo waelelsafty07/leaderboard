@@ -1,4 +1,5 @@
 import LeaderBoard from './leaderBoard.js';
+import showAlert from './showAlert.js';
 
 const leaderboard = new LeaderBoard();
 const submitBtn = document.querySelector('.btn-submit');
@@ -15,12 +16,14 @@ if (submitBtn) {
       user,
       score,
     };
-    if (user && score) {
-      spinner.style.display = 'block';
-      await leaderboard.addNewScores(body);
-      spinner.style.display = 'none';
-      nameInput.value = '';
-      scoreInput.value = '';
+    if (user === '' || score === '') {
+      return showAlert('Fill both required input', 'failed');
     }
+    spinner.style.display = 'block';
+    const res = await leaderboard.addNewScores(body);
+    spinner.style.display = 'none';
+    nameInput.value = '';
+    scoreInput.value = '';
+    return showAlert(res.result, 'success');
   });
 }
