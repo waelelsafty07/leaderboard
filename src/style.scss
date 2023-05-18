@@ -47,7 +47,24 @@ body {
   list-style: none;
 }
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  display: none;
+  margin: auto;
+}
+
+.border {
+  border-radius: 8px;
+}
+
 main {
+  margin-top: 1rem;
+
   .leaderboard {
     width: 90%;
     gap: 3rem;
@@ -78,6 +95,10 @@ main {
             &:nth-child(even) {
               background-color: #eee;
             }
+
+            .score-item-text {
+              margin: 1rem;
+            }
           }
         }
       }
@@ -97,6 +118,64 @@ main {
           }
         }
       }
+    }
+
+    .alert-container {
+      opacity: 0;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease-in;
+    }
+
+    .alert-visible {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.success {
+  background-color: green;
+}
+
+.failed {
+  background-color: #c95d5d;
+}
+
+@media screen and (min-width: 375px) {
+  main {
+    .leaderboard {
+      flex-direction: column-reverse;
+    }
+
+    .width-50 {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    .leaderboard {
+      flex-direction: row;
+    }
+
+    .width-50 {
+      width: 50%;
     }
   }
 }
