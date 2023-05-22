@@ -85,9 +85,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="https://github.com/waelelsafty07/leaderboard/dist"></a>
+## 🚀 Live Demo <a name="https://waelelsafty07.github.io/leaderboard/dist/"></a>
 
-- [[Live Demo Link](https://github.com/waelelsafty07/leaderboard/dist)]
+- [[Live Demo Link](https://waelelsafty07.github.io/leaderboard/dist/)]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
